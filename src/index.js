@@ -1,4 +1,4 @@
-function AlpineWakeLock(Alpine) {
+const wakelock = (Alpine) => {
     Alpine.directive('wakelock', (el, { value, expression }, { evaluate }) => {
         if (!expression) {
             console.error('Wake Lock directive requires a value/expression');
@@ -58,14 +58,4 @@ function AlpineWakeLock(Alpine) {
     });
 }
 
-export default AlpineWakeLock;
-
-// Auto-install if Alpine is available globally
-if (typeof window !== 'undefined') {
-    if (!window.Alpine) {
-        window.Alpine = {};
-    }
-
-    window.Alpine.plugin = window.Alpine.plugin || ((plugin) => plugin(window.Alpine));
-    window.Alpine.plugin(AlpineWakeLock);
-}
+export default wakelock;
