@@ -1,0 +1,40 @@
+{
+    "name": "alpinejs-wake-lock",
+    "version": "1.0.0",
+    "description": "Alpine.js directive to prevent screen sleep using the Wake Lock API",
+    "main": "dist/alpine-wake-lock.js",
+    "module": "dist/alpine-wake-lock.esm.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "rollup -c",
+        "dev": "rollup -c -w",
+        "prepublishOnly": "npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/pixelastronauts/alpinejs-wake-lock.git"
+    },
+    "keywords": [
+        "alpine",
+        "alpinejs",
+        "wake-lock",
+        "screen-wake",
+        "alpine-plugin"
+    ],
+    "author": "Your Name",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/pixelastronauts/alpinejs-wake-lock/issues"
+    },
+    "homepage": "https://github.com/pixelastronauts/alpinejs-wake-lock#readme",
+    "peerDependencies": {
+        "alpinejs": "^3.0.0"
+    },
+    "devDependencies": {
+        "@rollup/plugin-node-resolve": "^16.0.0",
+        "rollup": "^2.79.1",
+        "rollup-plugin-terser": "^7.0.2"
+    }
+}
